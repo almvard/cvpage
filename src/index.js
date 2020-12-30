@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers/index';
-import App from './App';
+import App from './containers/App';
+import { createTheme } from "./theme/theme";
+import { MuiThemeProvider } from "@material-ui/core";
 
 const store = createStore(reducers);
+const appTheme = createTheme();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <MuiThemeProvider theme={appTheme}>
+        <App theme={appTheme} />
+      </MuiThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

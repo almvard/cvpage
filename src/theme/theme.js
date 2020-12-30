@@ -12,4 +12,7 @@ export const createTheme = () => createMuiTheme({
       ...defaultBranding
     },
   },
+  typography: {
+    fontFamily: 'Helvetica, Calibri, sans-serif',
+  }
 });
