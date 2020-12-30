@@ -1,25 +1,25 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import * as PropTypes from 'prop-types';
-import { getEmail, getName } from './reducers/data';
-import { setEmail, setName } from './actions/data';
+import {getEmail, getName} from './reducers/data';
+import {setEmail, setName} from './actions/data';
+import TopBar from "./TopBar";
+import {createTheme} from "./theme/theme";
+import {MuiThemeProvider} from '@material-ui/core';
+import Divider from "@material-ui/core/Divider";
 
 function App(props) {
   const {
     email, name, setEmail, setName,
   } = props;
 
+  const appTheme = createTheme();
+
   return (
-    <div>
-      <p onClick={() => setEmail(`${email}p`)}>
-        email:
-        {email}
-      </p>
-      <p onClick={() => setName(`${name}n`)}>
-        name:
-        {name}
-      </p>
-    </div>
+    <MuiThemeProvider theme={appTheme}>
+      <TopBar/>
+      <Divider orientation={"vertical"}/>
+    </MuiThemeProvider>
   );
 }
 

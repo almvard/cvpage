@@ -2,3 +2,5 @@
 .idea/*
 *.idea/
 .idea_modules/
+/node_modules/
+.eslintcache
