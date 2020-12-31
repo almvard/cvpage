@@ -6,8 +6,7 @@ const defaultBranding = {
   third: '#D9D9D9',
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export const createTheme = () => createMuiTheme({
+const createTheme = () => createMuiTheme({
   palette: {
     primary: {
       ...defaultBranding,
@@ -19,3 +18,5 @@ export const createTheme = () => createMuiTheme({
     bodyFont: 'Calibri',
   },
 });
+
+export default createTheme;
