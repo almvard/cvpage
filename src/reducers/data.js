@@ -5,8 +5,7 @@ const initialState = {
   name: 'Alma Cederblad',
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default function (state = initialState, action) {
+function data(state = initialState, action) {
   switch (action.type) {
     case SET_NAME:
       return { ...state, name: action.name };
@@ -19,3 +18,5 @@ export default function (state = initialState, action) {
 
 export const getName = (state) => state.data.name;
 export const getEmail = (state) => state.data.email;
+
+export default data;

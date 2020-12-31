@@ -6,13 +6,16 @@ const defaultBranding = {
   third: '#D9D9D9',
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const createTheme = () => createMuiTheme({
   palette: {
     primary: {
-      ...defaultBranding
+      ...defaultBranding,
     },
   },
   typography: {
     fontFamily: 'Helvetica, Calibri, sans-serif',
-  }
+    headerFont: 'Helvetica',
+    bodyFont: 'Calibri',
+  },
 });
