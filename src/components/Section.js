@@ -43,7 +43,7 @@ const Section = (props) => {
               {subtitle}
             </Typography>
             <Typography className={classes.bodyText} variant="subtitle2">
-              {`${employer} |    ${date}`}
+              {employer && date && `${employer} | ${date}`}
             </Typography>
             <Typography className={classes.bodyText} variant="subtitle2">
               {content}

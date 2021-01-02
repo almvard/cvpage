@@ -49,6 +49,22 @@ const data = {
       },
     ],
   },
+  other: {
+    header: 'Övrig Erfarenhet',
+    merits: [
+      {
+        subtitle: 'Aktivitetsansvasrig',
+        employer: 'Systerskapet',
+        date: '2019 - 2020',
+        content: 'Aktivitetsansvarig för programmets förening som arbetar för ökad jämlikhet på programmen.'
+          + ' Arbetet innebar planerade och det övergripande ansvaret för genomförandet av alla aktiviteter'
+          + ' och event som anordnades.',
+      },
+      {
+        subtitle: 'Värd', employer: 'Larm', date: '2019', content: 'Värd på karriärmässan LARM I Linköping 2019.',
+      },
+    ],
+  },
   skills: [
     { skill: 'C++', skillLevel: 50 },
     { skill: 'Java', skillLevel: 70 },
@@ -64,6 +80,15 @@ const data = {
     { skill: 'ENGELSKA', skillLevel: 70 },
     { skill: 'SVENSKA (modersmol)', skillLevel: 60 },
   ],
+  profile: {
+    header: 'Profil',
+    merits: [{
+      content: 'Jag är en glad och ambitiös problemlösare som motiveras av möjligheten att lära mig nya saker. '
+        + 'Jag är en driven person med stor kommunikativ förmåga'
+        + ' och ett stort intresse för gränssnittdesign och användbarhet.'
+        + ' Jag är särskilt intresserad av att arbeta nära mina kunder med UX design och se kundbehov.',
+    }],
+  },
 };
 
 export default data;

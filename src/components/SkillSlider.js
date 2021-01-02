@@ -6,8 +6,9 @@ import './SkillSlider.css';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'space-between',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 
   track: {
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   progress: {
     backgroundColor: theme.palette.primary.main,
     '-webkit-animation': 'progressBar 1s ease-in-out',
-    '-webkit-animation-fill-mode': 'both',
   },
 }));
 
