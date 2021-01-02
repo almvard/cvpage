@@ -1,37 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import { makeStyles, withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+import './SkillSlider.css';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-});
 
-const BorderLinearProgress = withStyles((theme) => ({
-  root: {
+  track: {
     height: 12,
-    width: 80,
-  },
-  colorPrimary: {
     backgroundColor: theme.palette.primary.third,
+    width: 100,
   },
-  bar: {
+
+  span: {
+    display: 'block',
+    height: '100%',
+  },
+
+  progress: {
     backgroundColor: theme.palette.primary.main,
+    '-webkit-animation': 'progressBar 1s ease-in-out',
+    '-webkit-animation-fill-mode': 'both',
   },
-}))(LinearProgress);
+}));
 
 const SkillSlider = (props) => {
   const { skill, skillLevel } = props;
 
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       {skill}
-      <BorderLinearProgress variant="determinate" value={skillLevel} />
+      <div className={classes.track}>
+        <span className={classes.span} style={{ width: `${skillLevel}%` }}>
+          <span className={`${classes.progress} ${classes.span}`} />
+        </span>
+      </div>
     </div>
   );
 };
