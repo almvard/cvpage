@@ -53,7 +53,7 @@ const data = {
     header: 'Övrig Erfarenhet',
     merits: [
       {
-        subtitle: 'Aktivitetsansvasrig',
+        subtitle: 'Aktivitetsansvarig',
         employer: 'Systerskapet',
         date: '2019 - 2020',
         content: 'Aktivitetsansvarig för programmets förening som arbetar för ökad jämlikhet på programmen.'

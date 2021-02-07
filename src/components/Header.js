@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import Divider from './Divider';
+import TopBar from './TopBar';
 
 const useStyles = makeStyles({
   root: {
@@ -23,10 +23,13 @@ const useStyles = makeStyles({
 const Header = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <h1 className={classes.text}>Alma</h1>
-      <h1 className={`${classes.lastName} ${classes.text}`}> Cederblad</h1>
-    </div>
+    <>
+      <TopBar />
+      <div className={classes.root}>
+        <h1 className={classes.text}>Alma</h1>
+        <h1 className={`${classes.lastName} ${classes.text}`}> Cederblad</h1>
+      </div>
+    </>
   );
 };
 
