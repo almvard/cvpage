@@ -4,8 +4,9 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.primary.secondary,
-    minHeight: 24,
+    minHeight: theme.spacing(4),
     display: 'flex',
+    width: '100%',
   },
 }));
 

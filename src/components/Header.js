@@ -1,6 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
-import TopBar from './TopBar';
+import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -11,25 +10,21 @@ const useStyles = makeStyles({
   text: {
     textTransform: 'uppercase',
     letterSpacing: 7,
-    fontSize: 38,
   },
 
-  lastName: {
+  firstName: {
     whiteSpace: 'pre',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
   },
 });
 
 const Header = () => {
   const classes = useStyles();
   return (
-    <>
-      <TopBar />
-      <div className={classes.root}>
-        <h1 className={classes.text}>Alma</h1>
-        <h1 className={`${classes.lastName} ${classes.text}`}> Cederblad</h1>
-      </div>
-    </>
+    <div className={classes.root}>
+      <Typography variant="h2" className={`${classes.firstName} ${classes.text}`}>Alma </Typography>
+      <Typography variant="h2" className={classes.text}>Cederblad</Typography>
+    </div>
   );
 };
 

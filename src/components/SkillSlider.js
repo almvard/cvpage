@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'space-between',
-    fontSize: 14,
     fontWeight: 'bold',
   },
 

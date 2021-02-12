@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 3,
     fontWeight: 'normal',
     marginTop: theme.spacing(3),
-    fontSize: 18,
   },
   subtitle: {
     color: theme.palette.primary.main,
@@ -28,7 +27,7 @@ const Section = (props) => {
   const classes = useStyles();
   return (
     <>
-      <Typography className={classes.header} variant="h6">
+      <Typography className={classes.header} variant="h4">
         {header}
       </Typography>
       {merits.map((merit, index) => {
@@ -39,13 +38,13 @@ const Section = (props) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
           <div key={`merit ${index}`}>
-            <Typography className={`${classes.subtitle} ${classes.bodyText}`} variant="subtitle2">
+            <Typography className={`${classes.subtitle} ${classes.bodyText}`} variant="h5">
               {subtitle}
             </Typography>
-            <Typography className={classes.bodyText} variant="subtitle2">
+            <Typography className={classes.bodyText} variant="h5">
               {employer && date && `${employer} | ${date}`}
             </Typography>
-            <Typography className={classes.bodyText} variant="subtitle2">
+            <Typography className={classes.bodyText} variant="h6">
               {content}
             </Typography>
           </div>

@@ -5,6 +5,10 @@ import Header from '../components/Header';
 import Sections from '../components/Sections';
 import headerImage from '../assets/headerimagenew.jpg';
 import HeaderName from '../components/HeaderName';
+import Section from '../components/Section';
+import data from '../data/data';
+import SkillSlider from '../components/SkillSlider';
+import TopBar from '../components/TopBar';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -20,10 +24,16 @@ const useStyles = makeStyles((theme) => ({
   parallax: {
     backgroundImage: `url(${headerImage})`,
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'right',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100%',
+  },
+  left: {
+    padding: 32,
+    flex: 1,
+  },
+  main: {
+    display: 'flex',
   },
 }));
 
@@ -35,10 +45,23 @@ function App() {
       <div className={classes.parallax}>
         <HeaderName />
       </div>
+      <TopBar />
+
       <div className={classes.content}>
         <Header />
         <Divider />
-        <Sections />
+        <div className={classes.main}>
+          <div className={classes.left}>
+            <Section data={data.profile} />
+            {data.skills.map((item) => (
+              <SkillSlider
+                skill={item.skill}
+                skillLevel={item.skillLevel}
+              />
+            ))}
+          </div>
+          <Sections />
+        </div>
       </div>
     </div>
   );
